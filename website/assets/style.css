@@ -1,0 +1,38 @@
+:root{--bg:#f7f8fa;--surface:#fff;--text:#16181d;--muted:#5b6270;--line:#dfe3ea;--accent:#2563eb;--onaccent:#fff}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1115;--surface:#181b22;--text:#eceef2;--muted:#a0a7b4;--line:#2a2f3a;--accent:#6ea0ff;--onaccent:#0b1020}}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{margin:0;background:var(--bg);color:var(--text);font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+a{color:var(--accent)}a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+.skip{position:absolute;left:-999px}.skip:focus{left:8px;top:8px;background:var(--surface);padding:8px;z-index:20}
+.nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;justify-content:space-between;min-height:56px;flex-wrap:wrap}
+.brand{display:flex;gap:8px;align-items:center;font-weight:700;color:var(--text);text-decoration:none}
+.nav ul{display:flex;gap:20px;list-style:none;margin:0;padding:0}.nav ul a{color:var(--text);text-decoration:none}
+.nav a[aria-current]{color:var(--accent);font-weight:600}
+.menu{display:none;background:none;border:1px solid var(--line);color:var(--text);border-radius:8px;padding:6px 12px;font:inherit}
+.ic{width:24px;height:24px;flex:none;color:var(--accent)}
+.hero{padding:72px 0 48px;text-align:center}.hero.small{padding:48px 0 24px}
+.hero h1{font-size:clamp(2.2rem,6vw,3.8rem);line-height:1.1;margin:.2em 0}
+.lead{font-size:1.15rem;color:var(--muted);max-width:640px;margin:0 auto 1.2em}
+.eyebrow{color:var(--accent);font-weight:600}.muted{color:var(--muted);font-size:.9rem}
+.btn{display:inline-block;background:var(--accent);color:var(--onaccent);padding:12px 22px;border-radius:10px;text-decoration:none;font-weight:600;margin:4px}
+.btn.alt{background:none;color:var(--accent);border:1px solid var(--accent)}
+.shot{width:100%;max-width:640px;margin-top:32px;height:auto;filter:drop-shadow(0 12px 30px rgba(0,0,0,.18))}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:20px;text-decoration:none;color:var(--text)}
+.card:hover{border-color:var(--accent)}.card h3{margin:.5em 0 .2em}.card p{margin:0;color:var(--muted)}
+h2{display:flex;align-items:center;gap:10px;font-size:1.7rem;margin:1.6em 0 .5em}
+.band{background:var(--surface);border-block:1px solid var(--line);text-align:center;margin-top:48px;padding:24px 0 40px}.band h2{justify-content:center}
+.fs{padding:16px 0;border-top:1px solid var(--line)}.fs .lead{margin-left:0}
+.fl{list-style:none;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:12px}
+.fl li{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:12px 16px}.fl strong,.fl span{display:block}.fl span{color:var(--muted);font-size:.95rem}
+.toc{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;list-style:none;padding:0}
+.toc a{display:block;border:1px solid var(--line);border-radius:99px;padding:4px 14px;text-decoration:none;background:var(--surface)}
+.tw{overflow-x:auto}table{border-collapse:collapse;width:100%;background:var(--surface)}
+th,td{padding:10px 14px;border:1px solid var(--line);text-align:left}caption{caption-side:bottom;color:var(--muted);padding:8px;text-align:left}
+kbd{font:600 .95rem ui-monospace,Menlo,monospace;background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:2px 8px}
+details{background:var(--surface);border:1px solid var(--line);border-radius:10px;padding:10px 16px;margin:8px 0}summary{cursor:pointer;font-weight:600}
+footer{border-top:1px solid var(--line);margin-top:48px;padding:24px 0;color:var(--muted);font-size:.9rem}
+@media(max-width:640px){.menu{display:block}.nav ul{display:none;flex-direction:column;gap:0;width:100%;padding-bottom:8px}.nav ul.open{display:flex}.nav ul a{display:block;padding:10px 0}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
